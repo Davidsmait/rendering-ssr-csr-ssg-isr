@@ -3,24 +3,18 @@ export default function Segment({params}:any){
 
     return(
         <div>
-            {slug === 'ssr' && <Ssr />}
             {slug === 'csr' && <Csr />}
             {slug === 'isr' && <Isr />}
         </div>
     )
 }
 
-const Ssr = () => {
-    return(
-        <>
-            <h1>Ssr</h1>
-        </>
-    )
-}
 const Csr = () => {
     return(
         <>
             <h1>Csr</h1>
+            <h5 className="text-blue-500 text-center">Client Side Rendering</h5>
+
         </>
     )
 }
@@ -28,6 +22,8 @@ const Isr = () => {
     return(
         <>
             <h1>Isr</h1>
+            <h5 className="text-blue-500 text-center">Incremental Static Regeneration</h5>
+
         </>
     )
 }
